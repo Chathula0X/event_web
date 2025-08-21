@@ -33,7 +33,7 @@ function Home() {
 
         {/* Posters row */}
         <motion.div
-          className="flex gap-6 justify-center flex-wrap"
+          className="flex gap-6 md:gap-8 justify-center flex-wrap"
           initial="hidden"
           animate="show"
           variants={{
@@ -56,7 +56,7 @@ function Home() {
               whileTap={{ scale: 0.97 }}
             >
               {/* Card */}
-              <div className="relative w-[160px] h-[220px] rounded-2xl shadow-xl overflow-hidden flex flex-col">
+              <div className="relative w-[200px] h-[280px] sm:w-[220px] sm:h-[320px] md:w-[260px] md:h-[360px] lg:w-[280px] lg:h-[400px] rounded-2xl shadow-2xl overflow-hidden flex flex-col">
                 <img
                   src={poster.image}
                   alt={poster.title}
@@ -65,7 +65,7 @@ function Home() {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition duration-300" />
                 {/* Title */}
-                <p className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white font-semibold text-sm text-center px-2">
+                <p className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white font-semibold text-base md:text-lg text-center px-2">
                   {poster.title}
                 </p>
               </div>
