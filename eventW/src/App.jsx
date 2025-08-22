@@ -8,7 +8,7 @@ import Ticketview from './components/HomeComp/Ticketview'
 import Footer from './components/Footer'
 import Events from './Pages/Events'
 import EventDetails from './components/EventComp/EventDetails'
-
+import TicketPage from './Pages/TicketPage'
 function App() {
   return (
    <div>
@@ -22,6 +22,7 @@ function App() {
         </>} />
         <Route path="/events" element={<Events />} />
         <Route path="/events/:id" element={<EventDetails />} />
+        <Route path="/ticket" element={<TicketPage />} />
       </Routes>
       <Footer />
     </div>

@@ -37,6 +37,12 @@ function Navbar() {
               >
                 Events
               </Link>
+              <Link
+                to="/ticket"
+                className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out"
+              >
+                Tickets
+              </Link>
               <a
                 href="#about"
                 className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out"
@@ -112,6 +118,13 @@ function Navbar() {
               className="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out"
             >
               Events
+            </Link>
+            <Link
+              to="/ticket"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out"
+            >
+              Tickets
             </Link>
             <a
               href="#about"

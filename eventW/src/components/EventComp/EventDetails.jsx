@@ -39,9 +39,9 @@ function EventDetails() {
         <Link to="/events" className="px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 transition">
           ← Back to Events
         </Link>
-        <button className="px-6 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full hover:from-purple-700 hover:to-indigo-700 transition">
+        <Link to="/ticket" className="px-6 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full hover:from-purple-700 hover:to-indigo-700 transition">
           Book Ticket
-        </button>
+        </Link>
       </div>
     </div>
   )
