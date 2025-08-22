@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// App.js
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar'
@@ -7,10 +7,9 @@ import Home from './Pages/Home'
 import Ticketview from './components/HomeComp/Ticketview'
 import Footer from './components/Footer'
 import Events from './Pages/Events'
+import EventDetails from './components/EventComp/EventDetails'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
    <div>
     <Navbar />
@@ -22,6 +21,7 @@ function App() {
           <Ticketview />
         </>} />
         <Route path="/events" element={<Events />} />
+        <Route path="/events/:id" element={<EventDetails />} />
       </Routes>
       <Footer />
     </div>
