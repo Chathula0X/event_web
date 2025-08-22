@@ -4,7 +4,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/HeroSection/Hero'
 import Home from './Pages/Home'
-import Ticketview from './components/HomeComp/Ticketview'
+import TicketOverView from './components/HomeComp/TicketOverView'
 import Footer from './components/Footer'
 import Events from './Pages/Events'
 import EventDetails from './components/EventComp/EventDetails'
@@ -18,7 +18,7 @@ function App() {
         <Route path="/" element={<>
           <Hero />
           <Home />
-          <Ticketview />
+          <TicketOverView />
         </>} />
         <Route path="/events" element={<Events />} />
         <Route path="/events/:id" element={<EventDetails />} />
