@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import Events from './Pages/Events'
 import EventDetails from './components/EventComp/EventDetails'
 import TicketPage from './Pages/TicketPage'
+import AboutUs from'./Pages/AboutUs'
 function App() {
   return (
    <div>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/events/:id" element={<EventDetails />} />
         <Route path="/ticket" element={<TicketPage />} />
+        <Route path="/about" element={<AboutUs /> } />
       </Routes>
       <Footer />
     </div>
