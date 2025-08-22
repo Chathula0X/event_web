@@ -49,12 +49,12 @@ function Navbar() {
               >
                 About
               </Link>
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out"
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -133,12 +133,13 @@ function Navbar() {
             >
               About
             </Link>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
+              onClick={() => setIsMenuOpen(false)}
               className="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out"
             >
               Contact
-            </a>
+            </Link>
             <div className="pt-4 pb-3 border-t border-purple-100">
               <button className="w-full text-left text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out">
                 Sign In
