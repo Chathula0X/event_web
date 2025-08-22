@@ -80,7 +80,7 @@ function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <a href="#events">
+          <a href="/events">
             <motion.button
               className="relative px-8 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-purple-600 to-indigo-600 shadow-lg hover:shadow-xl overflow-hidden"
               whileHover={{ scale: 1.07 }}
