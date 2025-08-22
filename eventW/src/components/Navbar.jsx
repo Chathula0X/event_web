@@ -43,12 +43,12 @@ function Navbar() {
               >
                 Tickets
               </Link>
-              <a
-                href="#about"
+              <Link
+                to="/about"
                 className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out"
               >
                 About
-              </a>
+              </Link>
               <a
                 href="#contact"
                 className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out"
@@ -126,12 +126,13 @@ function Navbar() {
             >
               Tickets
             </Link>
-            <a
-              href="#about"
+            <Link
+              to="/about"
+              onClick={() => setIsMenuOpen(false)}
               className="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out"
             >
               About
-            </a>
+            </Link>
             <a
               href="#contact"
               className="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out"
