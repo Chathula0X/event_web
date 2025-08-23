@@ -24,7 +24,7 @@ function AboutUs() {
       {/* Mission Section */}
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center py-10">
         <motion.img
-          src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf"
+          src="https://colesclassroom.com/wp-content/uploads/2019/02/pexels-photo-1105666.jpeg"
           alt="Event"
           className="rounded-2xl shadow-lg"
           initial={{ opacity: 0, x: -80 }}
