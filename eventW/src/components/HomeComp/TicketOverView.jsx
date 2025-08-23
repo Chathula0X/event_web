@@ -10,6 +10,9 @@ const tickets = [
 ];
 
 function TicketOverView() {
+  // Create enough duplicates to fill the screen width continuously
+  const repeatedTickets = Array(10).fill(tickets).flat();
+
   return (
     <section className="py-10">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
@@ -26,24 +29,20 @@ function TicketOverView() {
           </a>
         </div>
 
+       
         {/* Horizontal Loop Section */}
         <div className="overflow-hidden relative w-full">
-          {/* Edge gradient mask for smooth fade-in/out */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-10 [background:linear-gradient(to_right,rgba(255,255,255,1),rgba(255,255,255,0))]" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-10 [background:linear-gradient(to_left,rgba(255,255,255,1),rgba(255,255,255,0))]" />
-
           <motion.div
-            className="flex gap-6 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]"
-            animate={{ x: ["0%", "-100%"] }}
-            transition={{ repeat: Infinity, duration: 18, ease: "linear" }}
+            className="flex flex-nowrap gap-6" // Added gap between tickets
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
             role="list"
             aria-label="Available tickets"
           >
-            {/* Duplicate tickets to make loop smooth */}
-            {[...tickets, ...tickets].map((ticket, index) => (
+            {repeatedTickets.map((ticket, index) => (
               <motion.div
                 key={`${ticket.id}-${index}`}
-                className="min-w-[220px] md:min-w-[260px] p-5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-2xl shadow-lg"
+                className="min-w-[220px] md:min-w-[260px] p-5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-2xl shadow-lg flex-shrink-0"
                 whileHover={{ scale: 1.05 }}
                 role="listitem"
                 aria-label={`${ticket.name}, ${ticket.date}, ${ticket.price}`}
