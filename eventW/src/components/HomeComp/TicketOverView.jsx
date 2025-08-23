@@ -29,11 +29,12 @@ function TicketOverView() {
           </a>
         </div>
 
+       
         {/* Horizontal Loop Section */}
         <div className="overflow-hidden relative w-full">
           <motion.div
-            className="flex flex-nowrap"
-            animate={{ x: ["0%", "-50%"] }} // move half the duplicated array
+            className="flex flex-nowrap gap-6" // Added gap between tickets
+            animate={{ x: ["0%", "-50%"] }}
             transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
             role="list"
             aria-label="Available tickets"
