@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Ticket, QrCode } from "lucide-react";
+import { Calendar, MapPin, Ticket, QrCode, ShoppingCart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function TicketView() {
   const tickets = [
@@ -54,7 +55,7 @@ function TicketView() {
             </div>
 
             {/* Bottom row */}
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between mb-4">
               <div>
                 <p className="text-xs text-gray-500">Ticket ID</p>
                 <p className="font-mono font-semibold text-gray-900">{t.id}</p>
@@ -63,6 +64,15 @@ function TicketView() {
                 <QrCode className="w-9 h-9 text-gray-500" />
               </div>
             </div>
+
+            {/* Buy Now Button */}
+            <Link
+              to="/checkout"
+              className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-purple-500/25 flex items-center justify-center group"
+            >
+              <ShoppingCart className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-200" />
+              Buy Now
+            </Link>
           </motion.div>
         ))}
       </motion.div>
